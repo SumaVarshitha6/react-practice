@@ -1,23 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import 
 
 function App() {
+    var [todos,setTodos]=React.useState(["promotions","react assignments","campaign",'ppts'])
+    function deleteTodo(n){
+      var temp = [...todos];
+      temp.splice(n,1);
+      setTodos([...temp])
+    }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+            <h2>Todolist</h2>
+            {
+              todos.map((todo,i)=>{
+                return <Todo todo={todo} delTodo={deleteTodo} index={i}></Todo>
+              })
+            }
     </div>
   );
 }
