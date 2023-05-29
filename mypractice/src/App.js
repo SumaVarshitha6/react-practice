@@ -11,7 +11,7 @@ function App() {
       setTodos([...temp])
     }
   return (
-    <div className="App">
+    <div className="App border border-1 border-dark p-3 m-2">
             <h2>Todolist</h2>
             {
               todos.map((todo,i)=>{
