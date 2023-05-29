@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import 
+import Todo from 'todo';
 
 function App() {
     var [todos,setTodos]=React.useState(["promotions","react assignments","campaign",'ppts'])
