@@ -1,37 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import Address from './adr';
+import First from './first';
+import Fourth from './fourth';
+import { createContext } from 'react';
 
+export var Usercontext=createContext('Usercontext');
 function App() {
-  var fnref = React.useRef();
-  var lnref = React.useRef();
-  var href = React.useRef();
-  var cref = React.useRef();
-  React.useEffect(() => {
-    fnref.current.focus();
-  }, []);
-  function fname(e) {
-    if (e.key === 'Enter') {
-      lnref.current.focus();
-    }
-  }
-  function lname(e) {
-    if (e.key === 'Enter') {
-      href.current.focus();
-    }
-  }
-  function hno(e) {
-    if (e.key === 'Enter') {
-      cref.current.focus();
-    }
+ var UserDetails = {
+    username: 'praveen',
+    lastname: 'gubbala',
+    no: 100
   }
   return (
-    <div className="App">
-      <input type="text" ref={fnref} onKeyUp={fname} placeholder="First name"/>
-      <input type="text" ref={lnref} placeholder="last name" onKeyUp={lname} />
-      <Address href={href} cref={cref} hno={hno}></Address>
-    </div>
+    <Usercontext.Provider value={UserDetails}>
+          <div className="App border border-2 border-danger m-2 p-1">
+            <First></First>
+            <Fourth></Fourth>
+          </div>
+    </Usercontext.Provider>
+    
   );
 }
 
