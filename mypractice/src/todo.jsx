@@ -25,11 +25,11 @@ function Comp(props){
       ])
       function addTask(){
         var newtask = document.getElementById('task').value;
-        setTodos([...todos],[{title:newtask,status:false}])
+        setTodos([...todos,{title:newtask,status:false}])
       }
       var done=React.useCallback(function(i){
         var temp = [...todos];
-        temp[i].status=!temp[i].status;
+        temp[i].status= !temp[i].status;
         setTodos([...temp])
       },[])
     return (
