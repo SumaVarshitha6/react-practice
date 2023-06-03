@@ -1,7 +1,4 @@
-import logo from './logo.svg';
-import './App.css';
 import React from 'react';
-import Address from './adr';
 
 function App() {
  
