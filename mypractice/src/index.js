@@ -1,5 +1,5 @@
 import React from 'react';
-import MyForm from './Form';
+import MyForm from './form';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -16,7 +16,7 @@ const myrouter = createBrowserRouter([
     element: <App></App>
   },
   {
-    path:'/Form',
+    path:'/form',
     element:<MyForm></MyForm>
 },
 ]);
