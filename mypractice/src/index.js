@@ -2,7 +2,6 @@ import React from 'react';
 import MyForm from './form';
 import Todolist from './Todolist';
 import Countries from './Countries';
-import CountryDetails from './CountryDetails';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -11,6 +10,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import CountryDetails from './CountryDetails';
 
 
 const myrouter = createBrowserRouter([
@@ -24,15 +24,12 @@ const myrouter = createBrowserRouter([
       },
       {
           path:'/Countries',
-          element:<Countries/>,
-          children:[
-            {
-              path:'/countrydetails',
-              element:<CountryDetails/>
-            }
-          ]
+          element:<Countries/>
+      },
+      {
+          path:'/countrydetails/:cname',
+          element:<CountryDetails/>
       }
-     
   ]
   },
   {
