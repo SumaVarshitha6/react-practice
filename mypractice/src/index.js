@@ -1,5 +1,4 @@
 import React from 'react';
-import MyForm from './Form';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -14,11 +13,7 @@ const myrouter = createBrowserRouter([
   {
     path: "/",
     element: <App></App>
-  },
-  {
-    path:'/Form',
-    element:<MyForm></MyForm>
-},
+  }
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
