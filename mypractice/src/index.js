@@ -1,5 +1,5 @@
 import React from 'react';
-import MyForm from './form';
+import MyForm from './Form.jsx';
 import Todolist from './Todolist';
 import Countries from './Countries';
 import ReactDOM from 'react-dom/client';
@@ -27,7 +27,7 @@ const myrouter = createBrowserRouter([
           element:<Countries/>
       },
       {
-          path:'/countrydetails/:cname',
+          path:'/countrydetails/:c',
           element:<CountryDetails/>
       }
   ]

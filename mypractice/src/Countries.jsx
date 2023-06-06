@@ -1,6 +1,6 @@
 import axios from "axios";
 import React,{useState,useEffect} from "react";
-import { Link ,Outlet} from "react-router-dom";
+import { Link } from "react-router-dom";
 function Countries() {
   const [countries, setCountries] = useState([])
   useEffect(()=>{
@@ -13,14 +13,10 @@ function Countries() {
       <h1>Countries</h1>
       <ul>
         {
-          countries.map((c,i)=>{
-            return <div>
-                 <li>
-                <Link to={'/countrydetails'} >{c.name}</Link>
+          countries.map((c)=>{
+            return <li>
+                <Link to={`/countrydetails/${c.alpha2Code}`}>{c.name}</Link>
                 </li>
-                  <Outlet></Outlet>
-                </div> 
-                     
           })
         }
       </ul>
