@@ -1,7 +1,14 @@
 import React from 'react';
-import MyForm from './form';
-import Todolist from './Todolist';
-import Countries from './Countries';
+import Home from './Home';
+import Aboutus from './Aboutus';
+import Products from './Products';
+import Services from './Services';
+import Mobile from './Mobile';
+import Laptop from './Laptop';
+import Ac from './Ac';
+import Consultation from './cons';
+import Training from './train';
+import Seo from './seo';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -10,8 +17,6 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import CountryDetails from './CountryDetails';
-
 
 const myrouter = createBrowserRouter([
   {
@@ -19,23 +24,50 @@ const myrouter = createBrowserRouter([
     element: <App></App>,
     children:[
       {
-          path:'/todolist',
-          element:<Todolist/>
+          path:'/home',
+          element:<Home/>
       },
       {
-          path:'/Countries',
-          element:<Countries/>
+          path:'/aboutus',
+          element:<Aboutus/>
       },
       {
-          path:'/countrydetails/:cname',
-          element:<CountryDetails/>
-      }
-  ]
+        path:'/products',
+        element:<Products/>
+      },
+      {
+        path:'/services',
+        element:<Services/>,
+        children:[
+          {
+            path:'/services/cons',
+            element:<Consultation/>   
+        },
+        {
+          path:'/services/train',
+          element:<Training/>
+        },
+        {
+          path:'/services/seo',
+          element:<Seo/>
+        }
+        ]
+      },
+      {
+        path:'/mobile',
+        element:<Mobile></Mobile>
+      },
+      {
+        path:'/laptop',
+        element:<Laptop></Laptop>
+      },
+      {
+        path:'/ac',
+        element:<Ac></Ac>
+      },
+    ]
   },
-  {
-    path:'/form',
-    element:<MyForm></MyForm>
-},
+  
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
