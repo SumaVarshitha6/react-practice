@@ -9,7 +9,7 @@ function Services() {
         <ol>
             <li><Link to='/services/cons'>Consultation </Link></li>
             <li><Link to='/services/train'>Training </Link></li>
-            <li><Link to='/services/seo'>SEO and Digital Marketing </Link></li>
+            <li><Link to='/services/mseo'>SEO and Digital Marketing </Link></li>
             <Outlet></Outlet>
         </ol>
     </div>
