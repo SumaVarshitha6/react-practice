@@ -2,6 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import Home from './Home';
+import Aboutus from './Aboutus';
+import Products from './Products';
+import Services from './Services';
+import Mobile from './Mobile';
+import Laptop from './Laptop';
+import Ac from './Ac';
+import Consultation from './cons';
+import Seo from './seo';
+import Training from './train';
 import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
@@ -12,7 +22,51 @@ import {
 const myrouter = createBrowserRouter([
   {
     path: "/",
-    element: <App></App>
+    element: <App></App>,
+    children:[
+      {
+        path: "/home",
+        element: <Home></Home>
+      },
+      {
+        path: "/aboutus",
+        element: <Aboutus></Aboutus>
+      },
+      {
+        path: "/products",
+        element: <Products></Products>
+      },
+      {
+        path: "/services",
+        element: <Services></Services>,
+        children:[
+          {
+            path: "/services/cons",
+            element: <Consultation></Consultation>
+          },
+          {
+            path: "/services/train",
+            element: <Training></Training>
+          },
+          {
+            path: "/services/seo",
+            element: <Seo></Seo>
+          }
+        ]
+      },
+      {
+        path: "/mobile",
+        element: <Mobile></Mobile>
+      },
+      {
+        path: "/laptop",
+        element: <Laptop></Laptop>
+      },
+      {
+        path: "/ac",
+        element: <Ac></Ac>
+      }
+    ]
   }
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
