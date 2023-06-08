@@ -8,6 +8,8 @@ import Services from './service';
 import Ang from './ang';
 import Reactjs from './reactjs';
 import App from './App';
+import Countries from './Countries';
+import CountryDetails from './CountryDetails';
 import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
@@ -43,6 +45,16 @@ const myrouter = createBrowserRouter([
           {
             path:'/service/react',
             element:<Reactjs></Reactjs>
+          }
+        ]
+      },
+      {
+        path:'/countries',
+        element:<Countries></Countries>,
+        children:[
+          {
+            path:'/countrydetails',
+            element:<CountryDetails></CountryDetails>
           }
         ]
       }
