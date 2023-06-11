@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CountryDetails from './CountryDetails';
 import axios from 'axios';
 function Countries() {
     const [countries, setCountries] = React.useState([]);

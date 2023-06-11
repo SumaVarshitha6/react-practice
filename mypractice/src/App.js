@@ -7,6 +7,7 @@ function App() {
          <Link to='/aboutus'>Aboutus</Link>&nbsp;&nbsp;&nbsp;
          <Link to='/contact'>Contact</Link>&nbsp;&nbsp;&nbsp;
          <Link to='/service'>Services</Link>&nbsp;&nbsp;&nbsp;
+         <Link to='/countries'>Countries</Link>&nbsp;&nbsp;&nbsp;
          <Outlet></Outlet>
     </div>
   );

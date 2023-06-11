@@ -1,15 +1,13 @@
 import React from 'react';
 import axios from 'axios';
 function CountryDetails(props) {
+  console.log(props.ccode)
   const [country, setCountry] = React.useState({});
   React.useEffect(() => {
-    const { ccode } = props;
-    if (ccode) {
         axios.get('https://restcountries.com/v2/all')
         .then(function (res) {
           setCountry([...res.data])
         })
-    }
   }, [props.ccode]);
   function abc() {
     console.dir(window.history);
@@ -19,7 +17,7 @@ function CountryDetails(props) {
     window.history.go(3);
   }
   return (
-    <div className="mybox">
+    <div className="border border-2 border-danger m-5 p-3">
       <h2>Name:{country.name}</h2>
       <img src={country.flag} width="100px" alt="" />
       <h2>Capital:{country.capital}</h2>

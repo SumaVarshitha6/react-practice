@@ -53,7 +53,7 @@ const myrouter = createBrowserRouter([
         element:<Countries></Countries>,
         children:[
           {
-            path:'/countrydetails',
+            path:'/countries/countrydetails',
             element:<CountryDetails></CountryDetails>
           }
         ]
