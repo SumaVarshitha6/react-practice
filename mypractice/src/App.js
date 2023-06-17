@@ -1,19 +1,21 @@
-import React from 'react';
-import { Provider } from 'react-redux';
-import Counter from './Counter';
-import Todolist from './todolist';
-import store from './store';
+import React from "react";
+import Counter from "./features/counter/Counter";
+import {Provider} from "react-redux";
+import {store} from "./app/store"
+import Todolist from "./features/todolist/Todolist";
+import Countries from "./features/countries/Countries";
+import Products from "./features/products/Products";
 function App() {
- 
   return (
     <Provider store={store}>
-    <div className="App border border-2 border-danger ">
-         <h1>My App</h1>
-         <Counter></Counter>
-         <Todolist></Todolist>
+    <div className="border border-2 border-danger m-2 p-2">
+       <h1>App...</h1>
+       <Products></Products>
+       <Counter></Counter>
+       <Todolist></Todolist>
+       <Countries></Countries>
     </div>
     </Provider>
   );
 }
-
 export default App;
